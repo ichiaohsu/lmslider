@@ -1,0 +1,7 @@
+*{padding:0; margin:0;}
+
+.lmslider-table li{
+    list-style: none;
+    float:left;
+    position:relative;
+}
