@@ -12,50 +12,31 @@ a.lm-controller{
     text-decoration: none;
 }
 
-a.lm-controller:hover{
-    color: rgb(218, 26, 26);
+/*
+.icon-minus::before,.icon-plus::before,.icon-circle:hover{
+    border-color: #da1a1a;
+}
+.lm-controller .icon-minus:hover:before,*/
+
+a .icon-minus:hover:before,
+a .icon-plus:hover:before,
+a .icon-plus:hover:after,
+.icon-circle:hover{
+    border-color: #da1a1a;
 }
 
-.line {
-    width: 20px;
-    height: 0px;
-
-    border: 2px solid #c6c5c5;
-    border-radius: 1px;
-    -webkit-border-radius: 1px;
-    -moz-border-radius: 1px;
-
-    display: inline-block;
-    /*vertical-align: middle;
-    top: 24px;*/
-}
-.line::before{
-    height:10px;
-}
-
-.circle {
-    width: 16px;
-	height: 16px;
-	z-index: 86;
-
-	border: 4px solid #c6c5c5;
-	border-radius: 50%;
-    display: inline-block;
-	opacity: 1;
-}
-
-.icon-plus {
-
+.icon-minus,.icon-plus {
     width: 24px;
     height: 24px;
+    margin-left: 10px;
+    margin-right: 10px;
     position: relative;
     top:0;
     left:0;
     display:inline-block;
 }
 
-.icon-plus::after {
-
+.icon-minus::before,.icon-plus::before{
     width: 20px;
     height: 0px;
 
@@ -70,7 +51,20 @@ a.lm-controller:hover{
     content:"";
 }
 
-.icon-plus::before {
+.icon-circle {
+    width: 16px;
+	height: 16px;
+	z-index: 86;
+    margin-left: 10px;
+    margin-right: 10px;
+
+	border: 4px solid #c6c5c5;
+	border-radius: 50%;
+    display: inline-block;
+	opacity: 1;
+}
+
+.icon-plus::after {
 
     width: 0px;
     height: 20px;
