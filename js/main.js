@@ -26,16 +26,15 @@ $(window).load(function(){
     $('.next').bind("click", function(){
         // Firstly find active photo
         var total = $('.lmslider-table li').length;
-        var activePhoto = $(this).siblings('.lmphoto-wrapper').find('.active-photo');
+        var activePhoto = $(this).parent('.lm-controller').siblings('.lmphoto-wrapper').find('.active-photo');
         var activeIndex = activePhoto.index();
-        console.log("n active photo index = " + activeIndex);
         if (total - activeIndex === 1){
-            $(this).siblings('.lmphoto-wrapper').children('.lmslider-table').animate({
+            $(this).parent('.lm-controller').siblings('.lmphoto-wrapper').children('.lmslider-table').animate({
                 "margin-left": (0)
             }, 700);
             activePhoto.siblings(':first').addClass('active-photo');
         }else{
-            $(this).siblings('.lmphoto-wrapper').children('.lmslider-table').animate({
+            $(this).parent('.lm-controller').siblings('.lmphoto-wrapper').children('.lmslider-table').animate({
                 "margin-left": (-(activeIndex + 1) * theWidth)
             }, 700);
             activePhoto.next().addClass('active-photo');
@@ -48,16 +47,15 @@ $(window).load(function(){
     $('.previous').bind("click", function(){
         // Firstly find active photo
         var total = $('.lmslider-table li').length;
-        var activePhoto = $(this).siblings('.lmphoto-wrapper').find('.active-photo');
+        var activePhoto = $(this).parent('.lm-controller').siblings('.lmphoto-wrapper').find('.active-photo');
         var activeIndex = activePhoto.index();
-        //console.log("p active photo index = " + activeIndex);
         if (activeIndex === 0){
-            $(this).siblings('.lmphoto-wrapper').children('.lmslider-table').animate({
+            $(this).parent('.lm-controller').siblings('.lmphoto-wrapper').children('.lmslider-table').animate({
                 "margin-left": (-(total - 1) * theWidth)
             }, 700);
             activePhoto.siblings(':last').addClass('active-photo');
         }else{
-            $(this).siblings('.lmphoto-wrapper').children('.lmslider-table').animate({
+            $(this).parent('.lm-controller').siblings('.lmphoto-wrapper').children('.lmslider-table').animate({
                 "margin-left": (-(activeIndex - 1) * theWidth)
             }, 700);
             activePhoto.prev().addClass('active-photo');
