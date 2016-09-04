@@ -2,4 +2,4 @@
 This is a practice to implement an image slider, whose controller is designed in the shape of the light meter in an old type camera, Nikon FM2
 
 # URL
-http://ichiaohsu.github.io/lmslider/
+http://ichiaohsu.github.io/lmslider/index.html
